@@ -1,4 +1,4 @@
-# 😇HGU Penalty System😇
+# HGU Penalty System😇
 
 ## 👉소개👈
 저희 팀 프로젝트의 주제는 ‘기숙사 학부생들을 위한 벌점 시스템’입니다. 
