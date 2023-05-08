@@ -26,7 +26,7 @@
 ## 👉팀 소개 및 팀원이 맡은 역할👈
 #### 저희는 OSS 1분반 HGU Penalty System 프로젝트를 진행하게 된 22200427 안하경, 22200377 설원준 입니다. 
 
-###### 😸안하경(Developer)😸
+##### 😸안하경(Developer)😸
 - Contributer
 - WIKI 공동관리
 - 벌점 삭제 기능
@@ -35,7 +35,7 @@
 - 전체 삭제 기능
 - 종료 기능
 
-###### 🤪설원준(Developer)🤪 
+##### 🤪설원준(Developer)🤪 
 - Repo Owner
 - WIKI 공동관리
 - 벌점 추가 기능
