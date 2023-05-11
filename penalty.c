@@ -1,3 +1,5 @@
+#include "penalty.h"
+
 int selectMenu(){
     int menu;
     printf("\n*** HGU Penalty System ***\n");
