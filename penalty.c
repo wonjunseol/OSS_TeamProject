@@ -18,7 +18,7 @@ int selectMenu(){
     return menu;
 }
 
-int deletePenalty(Book *s){
+int deletePenalty(student *s){
     printf("몇점을 삭제하시겠습니까?");
     int num;
     scanf("%d",&num);
@@ -26,7 +26,26 @@ int deletePenalty(Book *s){
     return 1;
 }
 
-int deleteStudent(Book *s){
+int deleteStudent(student *s){
     s->totalNum=-1;
     return 1;
+}
+
+void searchPenalty(student *s,int count){
+    int snt=0;
+    int search
+    printf("찾으시는 총벌점은?");
+    scanf("%d",&search);
+    for(int i=0;i<count;i++){
+        if(s[i].totalNum==-1){continue;}
+        if(s[i]->totalNum==search){
+         printf("이름 학번 벌점 팀교수님 rc 호실 상담신청여부");
+         printf("===============================\n");
+         readScore(s[i]);
+         snt++;
+        }
+    }
+    if(snt==0){
+        printf("검색된 데이터 없음\n");
+    }
 }

@@ -18,7 +18,7 @@ while(1){
     }
 }
 else if(menu==2){
-    int delete=selectno(ㅔlist,index);
+    int delete=selectno(plist,index);
     if(delete==0){
         printf("취소됨\n");
         continue;
@@ -35,7 +35,7 @@ else if(menu==2){
     }
 }
 else if(menu==3){
-    int delete=selectno(slist,index);
+    int delete=selectno(plist,index);
     if(delete==0){
         printf("취소됨\n");
         continue;
@@ -46,9 +46,12 @@ else if(menu==3){
     scanf("%d",&deleteok);
     if(deleteok==0){printf("취소됨\n"); continue;}
     else if(deleteok==1){
-        deleteStudent(&slist[delete-1]);
+        deleteStudent(&plist[delete-1]);
         printf("삭제 완료!\n");
     }
     }
+}
+else if(menu==6){
+    searchPenalty(slist,index);
 }
 }
