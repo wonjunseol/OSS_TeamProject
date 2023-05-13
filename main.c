@@ -8,7 +8,7 @@ int main(){
 	int count=0;
 	student plist[100];
 	int index=0;
-	count=loadData(slist);
+	count=loadData(plist);
 	index=count;
 while(1){
     menu=selectMenu();
@@ -53,5 +53,8 @@ else if(menu==3){
 }
 else if(menu==6){
     searchPenalty(slist,index);
+}
+else if(menu==8){
+    saveData(slist,index);
 }
 }

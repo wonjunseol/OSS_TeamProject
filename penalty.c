@@ -49,3 +49,37 @@ void searchPenalty(student *s,int count){
         printf("검색된 데이터 없음\n");
     }
 }
+
+void saveData(student *s, int count){
+    FILE *fp;
+    fp=fopen("penalty.txt","wt");
+    for(int i=0;i<count;i++){
+        if(s[i].totalNum==-1) continue;
+        fprintf(fp,"%s %d %u %s %s %d %c\n",s[i].name,s[i].studentId,s[i].totalNum,s[i].teamProf,s[i].rcName,s[i].roomNum,s[i].apply);
+    }
+    fclose(fp);
+    printf("=>저장됨!");
+}
+
+int loadData(student *s){
+    int i=0;
+    FILE *fp;
+    fp=fopen("penalty.txt","rt");
+    if(fp==NULL){
+        printf("파일 없음\n");
+        return 0;
+    }
+    for(;i<100;i++){
+        fscanf(fp,"%s",s[i].name);
+        if(feof(fp)) break;
+        fscanf(fp,"%d",&s[i].studentId);
+        fscanf(fp,"%u",&s[i].totalNum);
+        fscanf(fp,"%s",&s[i].teamProf); 
+        fscanf(fp,"%s",s[i].rcName);
+        fscanf(fp,"%d",s[i].roomNum);
+        fscanf(fp,"%c",s[i].apply);        
+    }
+    fclose(fp);
+    printf("=>로딩 성공!\n");
+    return i;
+}
