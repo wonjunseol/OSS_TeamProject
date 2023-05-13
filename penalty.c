@@ -17,3 +17,16 @@ int selectMenu(){
     scanf("%d", &menu);
     return menu;
 }
+
+int deletePenalty(Book *s){
+    printf("몇점을 삭제하시겠습니까?");
+    int num;
+    scanf("%d",&num);
+    s->totalNum-=num;
+    return 1;
+}
+
+int deleteStudent(Book *s){
+    s->totalNum=-1;
+    return 1;
+}

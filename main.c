@@ -3,4 +3,52 @@
 #include "penalty.h"
 
 int main(){
+	int menu;
+	int result=0;
+	int count=0;
+	student plist[100];
+	int index=0;
+	count=loadData(slist);
+	index=count;
+while(1){
+    menu=selectMenu();
+    if(menu==0){ break;}
+    if((menu==2)||(menu==3)||(menu==4))||(menu==5)||(menu==6)||(menu==7)||(menu==9){
+        if(count==0){printf("데이터가 없습니다\n"); continue;
+    }
+}
+else if(menu==2){
+    int delete=selectno(ㅔlist,index);
+    if(delete==0){
+        printf("취소됨\n");
+        continue;
+    }
+    else{
+     printf("%s 학생의 벌점을 수정하시겠습니까(취소=0)(수락=1):",plist[index-1].name);
+    int deleteok;
+    scanf("%d",&deleteok);
+    if(deleteok==0){printf("취소됨\n"); continue;}
+    else if(deleteok==1){
+        deletePenalty(&plist[delete-1]);
+        printf("벌점 수정 완료!\n");
+    }
+    }
+}
+else if(menu==3){
+    int delete=selectno(slist,index);
+    if(delete==0){
+        printf("취소됨\n");
+        continue;
+    }
+    else{
+     printf("진짜로 삭제하시겠습니까(취소=0)(수락=1):");
+    int deleteok;
+    scanf("%d",&deleteok);
+    if(deleteok==0){printf("취소됨\n"); continue;}
+    else if(deleteok==1){
+        deleteStudent(&slist[delete-1]);
+        printf("삭제 완료!\n");
+    }
+    }
+}
 }
