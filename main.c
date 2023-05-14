@@ -54,6 +54,16 @@ else if(menu==3){
     }
     }
 }
+else if(menu == 4) {
+     printf("\n");
+     int no = selectDataNo(plist, count);
+     if(no == 0) {
+         printf("=> 취소됨!\n");
+         continue;
+     }
+     updateStudent(&plist[no-1]);
+     printf("\n");
+}	
 else if(menu==6){
     searchPenalty(slist,index);
 }
