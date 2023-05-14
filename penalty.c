@@ -83,3 +83,18 @@ int loadData(student *s){
     printf("=>로딩 성공!\n");
     return i;
 }
+
+void readStudent(student plist) {
+    printf("	 %s %d %s교수님 %s %d\n", plist.name, plist.studentId, plist.teamProf, plist.rcName, plist.roomNum);
+}
+
+void listStudent(student *plist, int count) {
+    printf("*****************\n");
+    for(int i=0; i<count; i++) {
+        if(plist[i].totalNum == 0) {
+            continue;
+        }
+        printf("%2d ", i+1);
+        readStudent(plist[i]);
+    }
+}
