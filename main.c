@@ -17,6 +17,9 @@ while(1){
         if(count==0){printf("데이터가 없습니다\n"); continue;
     }
 }
+else if (menu == 1){
+          count += addStudent(plist, count);
+}
 else if(menu==2){
     int delete=selectno(plist,index);
     if(delete==0){
