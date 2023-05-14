@@ -60,4 +60,7 @@ else if(menu==6){
 else if(menu==8){
     saveData(slist,index);
 }
+else if(menu==10){
+    showInfo();
+}
 }
