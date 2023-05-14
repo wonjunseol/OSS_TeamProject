@@ -98,3 +98,52 @@ void listStudent(student *plist, int count) {
         readStudent(plist[i]);
     }
 }
+
+int addStudent(student *plist, int count) {
+    int check = 0;
+    getchar();
+    printf("\n");
+    listStudent(plist, count);
+    printf("학생을 추가하시겠습니까? 아니면 기존에 있는 학번에 벌점을 추가하시겠습니까?(학생 추가: 0, 벌점 추가: 1) ");
+    scanf("%d", &check);
+    if(check == 0) {
+        goStudent(plist, count);
+        printf("%s학생이 벌점 1점으로 추가되었습니다.\n", plist[count].name);
+    }
+    else if(check == 1) {
+        goNum(plist, count);
+    }
+    return 1;
+}
+
+void goStudent(student *plist, int count) {
+    printf("추가할 학생의 이름은? ");
+    scanf("%s", plist[count].name);
+    printf("추가할 학생의 학번은? ");
+    scanf("%d", &plist[count].studentId);
+    printf("추가할 학생의 팀교수님은? ");
+    scanf("%s", plist[count].teamProf);
+    printf("추가할 학생의 RC는? ");
+    scanf("%s", plist[count].rcName);
+    printf("추가할 학생의 호실은? ");
+    scanf("%d", &plist[count].roomNum);
+    plist[count].totalNum ++;
+}
+
+void goNum(student *plist, int count) {
+    int check;
+    int go = 0;
+    printf("벌점을 줄 학생의 학번은? ");
+    scanf("%d", &check);
+    for(int i=0; i<count; i++) {
+        if(check == plist[i].studentId) {
+            go = 1;
+            plist[i].totalNum ++;
+            printf("%s학생의 벌점이 1점 추가되었습니다.\n", plist[i].name);
+            break;
+        }
+    }
+    if(go == 0) {
+        printf("해당 학번의 학생이 없습니다.\n");
+    }
+}
