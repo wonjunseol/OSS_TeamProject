@@ -78,8 +78,7 @@ int loadData(student *s){
         fscanf(fp,"%s",s[i].rcName);
         fscanf(fp,"%d",s[i].roomNum);
         fscanf(fp,"%c",s[i].apply);        
-    }
-    fclose(fp);
+}    fclose(fp);
     printf("=>로딩 성공!\n");
     return i;
 }
@@ -97,4 +96,20 @@ void listStudent(student *plist, int count) {
         printf("%2d ", i+1);
         readStudent(plist[i]);
     }
+}
+void showInfo(){
+    printf("
+한동대학교의 학생 생활관은 "공동 생활 공간"으로 나를 지키고 타인을 배려하는 마음으로 함께 수칙을 지켜나갑시다.\n\n
+*생활관 건물 내에서 음주 및 흡연을 하는 학생이 적발시 운영내규 벌점기준표에 의거하여 퇴사 조치대상이므로 기숙사내에서는 절대로 음주와 흡연을 금지하여 주시길 바랍니다.*\n\n
+무단 외박 - 1점\n
+생활관 내에 외부인 출입 및 숙박 - 2점\n
+공동사용구역에 음식물 및 쓰레기무단투기 - 2점\n
+인원점검표에 허위기재 - 3점\n
+생활관 관련 시설물을 고의로 파괴 또는 훼손 - 3점\n
+형사상 위범 행위자(절도. 폭력) - 4점\n
+생활관 내에서 음주, 흡연 - 퇴거\n
+남.여 기숙사 무단 출입 - 퇴거\n\n
+
+*벌점 7점시 팀교수님 면담*\n
+*벌점 10점시 퇴거*\n")
 }
