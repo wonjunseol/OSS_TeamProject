@@ -54,6 +54,25 @@ else if(menu==3){
     }
     }
 }
+else if(menu == 4) {
+     printf("\n");
+     int no = selectDataNo(plist, count);
+     if(no == 0) {
+         printf("=> 취소됨!\n");
+         continue;
+     }
+     updateStudent(&plist[no-1]);
+     printf("\n");
+}
+else if(menu == 5) { 
+     if(count >0) {
+         printf("벌점을 받은 모든 학생들의 리스트\n");
+         listStudent(plist, count);
+     }
+     else {
+         printf("입력된 학생이 없습니다.\n");
+     }
+}
 else if(menu==6){
     searchPenalty(plist,index);
 }

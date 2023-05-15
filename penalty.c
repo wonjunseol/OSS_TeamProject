@@ -96,6 +96,56 @@ void listStudent(student *plist, int count) {
         readStudent(plist[i]);
     }
 }
+<<<<<<< HEAD
+
+int addStudent(student *plist, int count) {
+    int check = 0;
+    getchar();
+    printf("\n");
+    listStudent(plist, count);
+    printf("학생을 추가하시겠습니까? 아니면 기존에 있는 학번에 벌점을 추가하시겠습니까?(학생 추가: 0, 벌점 추가: 1) ");
+    scanf("%d", &check);
+    if(check == 0) {
+        goStudent(plist, count);
+        printf("%s학생이 벌점 1점으로 추가되었습니다.\n", plist[count].name);
+    }
+    else if(check == 1) {
+        goNum(plist, count);
+    }
+    return 1;
+}
+
+void goStudent(student *plist, int count) {
+    printf("추가할 학생의 이름은? ");
+    scanf("%s", plist[count].name);
+    printf("추가할 학생의 학번은? ");
+    scanf("%d", &plist[count].studentId);
+    printf("추가할 학생의 팀교수님은? ");
+    scanf("%s", plist[count].teamProf);
+    printf("추가할 학생의 RC는? ");
+    scanf("%s", plist[count].rcName);
+    printf("추가할 학생의 호실은? ");
+    scanf("%d", &plist[count].roomNum);
+    plist[count].totalNum ++;
+}
+
+void goNum(student *plist, int count) {
+    int check;
+    int go = 0;
+    printf("벌점을 줄 학생의 학번은? ");
+    scanf("%d", &check);
+    for(int i=0; i<count; i++) {
+        if(check == plist[i].studentId) {
+            go = 1;
+            plist[i].totalNum ++;
+            printf("%s학생의 벌점이 1점 추가되었습니다.\n", plist[i].name);
+            break;
+        }
+    }
+    if(go == 0) {
+        printf("해당 학번의 학생이 없습니다.\n");
+    }
+=======
 void showInfo(){
     printf("
 한동대학교의 학생 생활관은 "공동 생활 공간"으로 나를 지키고 타인을 배려하는 마음으로 함께 수칙을 지켜나갑시다.\n\n
@@ -111,4 +161,98 @@ void showInfo(){
 
 *벌점 7점시 팀교수님 면담*\n
 *벌점 10점시 퇴거*\n")
+>>>>>>> 3d12585df3109978d6a1013b6a448978a13606ef
+}
+
+int addStudent(student *plist, int count) {
+    int check = 0;
+    getchar();
+    printf("\n");
+    listStudent(plist, count);
+    printf("학생을 추가하시겠습니까? 아니면 기존에 있는 학번에 벌점을 추가하시겠습니까?(학생 추가: 0, 벌점 추가: 1) ");
+    scanf("%d", &check);
+    if(check == 0) {
+        goStudent(plist, count);
+        printf("%s학생이 벌점 1점으로 추가되었습니다.\n", plist[count].name);
+    }
+    else if(check == 1) {
+        goNum(plist, count);
+    }
+    return 1;
+}
+
+void goStudent(student *plist, int count) {
+    printf("추가할 학생의 이름은? ");
+    scanf("%s", plist[count].name);
+    printf("추가할 학생의 학번은? ");
+    scanf("%d", &plist[count].studentId);
+    printf("추가할 학생의 팀교수님은? ");
+    scanf("%s", plist[count].teamProf);
+    printf("추가할 학생의 RC는? ");
+    scanf("%s", plist[count].rcName);
+    printf("추가할 학생의 호실은? ");
+    scanf("%d", &plist[count].roomNum);
+    plist[count].totalNum ++;
+}
+
+void goNum(student *plist, int count) {
+    int check;
+    int go = 0;
+    printf("벌점을 줄 학생의 학번은? ");
+    scanf("%d", &check);
+    for(int i=0; i<count; i++) {
+        if(check == plist[i].studentId) {
+            go = 1;
+            plist[i].totalNum ++;
+            printf("%s학생의 벌점이 1점 추가되었습니다.\n", plist[i].name);
+            break;
+        }
+    }
+    if(go == 0) {
+        printf("해당 학번의 학생이 없습니다.\n");
+    }
+}
+
+void goCouncel(student *plist, int count) {
+    int check;
+    int yes;
+    char day[5];
+    printf("상담을 신청할 학번을 입력하세요. ");
+    scanf("%d", &check);
+    for(int i=0; i<100; i++) {
+        if(plist[i].totalNum != 0) {
+            if(check == plist[i].studentId) {
+                if(plist[i].apply == 'N') { 
+                    if(plist[i].totalNum >= 7) {
+                        printf("해당 학번의 학생의 총 벌점은 %d점이므로 상담신청이 가능합니다.\n", plist[i].totalNum);
+                        printf("%s교수님과 상담을 신청하시겠습니까? (신청: 1, 취소: 0) ", plist[i].teamProf);
+                        scanf("%d", &yes);
+                        if(yes == 1) {
+                            printf("%s교수님과의 상담 신청이 완료되었습니다.\n", plist[i].teamProf);
+                            plist[i].apply = 'Y';
+                            break;
+                        }
+                        else {
+                            printf("취소됨!\n");
+                        }
+                    }
+                    else {
+                        printf("총 벌점이 7점 미만이라 상담을 신청할 수 없습니다. 해당 학번의 총 벌점: %d\n", plist[i].totalNum);
+                        break;
+                    }
+                }
+                else {
+                    printf("이미 상담이 신청 된 학생입니다.\n");
+                    break;
+                }
+            }
+            else {
+                printf("입력한 학번은 없는 학번입니다.\n");
+            }
+        }
+        else if(plist[i].totalNum != 0) {
+            printf("입력하신 학번은 없는 학번입니다.\n");
+            break;
+        }
+    }
 }
