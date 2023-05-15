@@ -213,3 +213,47 @@ void goNum(student *plist, int count) {
         printf("해당 학번의 학생이 없습니다.\n");
     }
 }
+
+void goCouncel(student *plist, int count) {
+    int check;
+    int yes;
+    char day[5];
+    printf("상담을 신청할 학번을 입력하세요. ");
+    scanf("%d", &check);
+    for(int i=0; i<100; i++) {
+        if(plist[i].totalNum != 0) {
+            if(check == plist[i].studentId) {
+                if(plist[i].apply == 'N') { 
+                    if(plist[i].totalNum >= 7) {
+                        printf("해당 학번의 학생의 총 벌점은 %d점이므로 상담신청이 가능합니다.\n", plist[i].totalNum);
+                        printf("%s교수님과 상담을 신청하시겠습니까? (신청: 1, 취소: 0) ", plist[i].teamProf);
+                        scanf("%d", &yes);
+                        if(yes == 1) {
+                            printf("%s교수님과의 상담 신청이 완료되었습니다.\n", plist[i].teamProf);
+                            plist[i].apply = 'Y';
+                            break;
+                        }
+                        else {
+                            printf("취소됨!\n");
+                        }
+                    }
+                    else {
+                        printf("총 벌점이 7점 미만이라 상담을 신청할 수 없습니다. 해당 학번의 총 벌점: %d\n", plist[i].totalNum);
+                        break;
+                    }
+                }
+                else {
+                    printf("이미 상담이 신청 된 학생입니다.\n");
+                    break;
+                }
+            }
+            else {
+                printf("입력한 학번은 없는 학번입니다.\n");
+            }
+        }
+        else if(plist[i].totalNum != 0) {
+            printf("입력하신 학번은 없는 학번입니다.\n");
+            break;
+        }
+    }
+}
