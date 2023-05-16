@@ -6,7 +6,7 @@
 
 <img width="300" alt="KakaoTalk_20230516_150334578" src="https://github.com/wonjunseol/OSS_TeamProject/assets/128044721/da75e4ab-51e7-478a-b725-8ead24c0a1be"> <img width="400" alt="벌점" src="https://github.com/wonjunseol/OSS_TeamProject/assets/128044721/c3dd6a6d-0825-4553-b8d9-d4d7adb3a7f8">
 
-## 🧩기능 소개
+## 🧩 기능 소개
 1. 벌점 추가
 2. 벌점 삭제(학번으로 학생 검색 후 벌점 삭제)
 3. 벌점 수정(사례와 벌점 수위 수정)
@@ -18,19 +18,19 @@
 9. 공지사항 및 벌점 리스트
 10. 종료
 
-## 🧩개발환경 및 언어
+## 🧩 개발환경 및 언어
 - 개발환경: git, vscode
 
 - 언어: C
 
-## 🧩팀 소개 및 팀원이 맡은 역할
+## 🧩 팀 소개 및 팀원이 맡은 역할
 #### 저희는 OSS 1분반 HGU Penalty System 프로젝트를 진행하게 된 22200377 설원준, 22200427 안하경입니다. 
 
 | ![KakaoTalk_Photo_2023-05-16-14-46-52](https://github.com/wonjunseol/OSS_TeamProject/assets/130718201/160b741e-98c6-40d3-91f7-3bccf4edca03) | ![KakaoTalk_Photo_2023-05-16-14-52-31](https://github.com/wonjunseol/OSS_TeamProject/assets/130718201/bbad68bc-23d7-45bb-a9fe-a4a0aea21a64) | 
 | :--------------------------------------: | :-----------------------------------: | 
 |             **설원준**              |            **안하경**            |        
 
-##### 🧩안하경(Developer)
+##### 🧩 안하경(Developer)
 - Contributer
 - WIKI 공동관리
 - 벌점 삭제 기능
@@ -40,7 +40,7 @@
 - 파일 로드 기능
 - 종료 기능
 
-##### 🧩설원준(Developer)
+##### 🧩 설원준(Developer)
 - Repo Owner
 - WIKI 공동관리
 - 벌점 추가 기능
