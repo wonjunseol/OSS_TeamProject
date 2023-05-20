@@ -77,10 +77,10 @@ else if(menu == 5) {
      }
 }
 else if(menu==6){
-    searchPenalty(slist,index);
+    searchPenalty(plist,index);
 }
 else if(menu==8){
-    saveData(slist,index);
+    saveData(plist,index);
 }
 else if(menu==10){
     showInfo();

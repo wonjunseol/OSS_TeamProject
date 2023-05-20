@@ -39,10 +39,9 @@ void searchPenalty(student *s,int count){
     for(int i=0;i<count;i++){
         if(s[i].totalNum==-1){continue;}
         if(s[i]->totalNum==search){
-         printf("이름 학번 벌점 팀교수님 rc 호실 상담신청여부");
-         printf("===============================\n");
-         readScore(s[i]);
-         snt++;
+		printf("*****************\n");
+         	readStudent(s[i]);
+		snt++;
         }
     }
     if(snt==0){
