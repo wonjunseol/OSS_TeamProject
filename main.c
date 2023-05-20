@@ -18,7 +18,10 @@ while(1){
     }
 }
 else if (menu == 1){
-          count += addStudent(plist, count);
+          addStudent(plist, count);
+            if(plist[count].totalNum != -1) {
+                count++;
+            }
 }
 else if(menu==2){
     int delete=selectno(plist,index);
