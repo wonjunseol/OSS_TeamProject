@@ -4,11 +4,11 @@ int selectMenu(){
     int menu;
     printf("\n*** HGU Penalty System ***\n");
     printf("1. 벌점 추가\n"); 
-    printf("2. 벌점 삭제\n"); 
-    printf("3. 학생 삭제\n"); 
+    printf("2. 벌점 삭제(학번으로 학생 검색 후 벌점 삭제)\n"); 
+    printf("3. 학생 삭제(학번으로 학생 검색 후 학생 삭제)\n"); 
     printf("4. 벌점 수정\n"); 
-    printf("5. 벌점 조회\n"); 
-    printf("6. 벌점 검색\n");
+    printf("5. 벌점을 받은 학생 조회\n"); 
+    printf("6. 벌점 검색(총 벌점이 찾는 벌점에 해당하는 학생들 리스트)\n");
     printf("7. 상담 신청\n");
     printf("8. 파일 저장\n");
     printf("9. 전체삭제\n");
