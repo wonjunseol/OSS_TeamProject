@@ -4,7 +4,7 @@
 typedef struct {
 	char name[30];
 	int studentId;
-	unsigned char totalNum;
+	int totalNum;
 	char teamProf[30];
 	char rcName[30];
 	int roomNum;
