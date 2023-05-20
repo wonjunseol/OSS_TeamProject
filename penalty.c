@@ -19,6 +19,25 @@ int selectMenu(){
     return menu;
 }
 
+int searchID(student *s, int count){
+ int search;
+    printf("찾으시는 학번은(취소: 0)? ");
+    scanf("%d",&search);
+    if (search==0) {
+        return -2;
+    }
+    for(int i=0;i<100;i++){
+        if(s[i].totalNum==0){
+            continue;
+        }
+        if(s[i].studentId==search){
+            return i;
+            }
+         }
+    return -1;
+}
+
+
 int deletePenalty(student *s){
     printf("몇점을 삭제하시겠습니까?");
     int num;
