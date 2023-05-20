@@ -82,6 +82,16 @@ else if(menu==6){
 else if(menu==8){
     saveData(plist,index);
 }
+else if(menu == 9) {
+        printf("정말로 삭제하시겠습니까?(삭제: 0, 취소: 1) ");
+        scanf("%d", &check);
+    if(check == 0) {
+        count = goDelete(plist, count);
+    }
+    else {
+        printf("취소됨!\n");
+    }
+}
 else if(menu==10){
     showInfo();
 }
