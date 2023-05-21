@@ -122,6 +122,8 @@ int updateStudent(student *plist) {
     scanf("%s", plist->name);
     printf("수정할 학생의 학번은? ");
     scanf("%d", &plist->studentId);
+    printf("수정할 학생의 벌점은? ");
+    scanf("%d", &plist->totalNum);
     printf("수정할 학생의 팀교수님은? ");
     scanf("%s", plist->teamProf);
     printf("수정할 학생의 RC는? ");
