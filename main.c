@@ -14,7 +14,6 @@ int main() {
     count=loadData(plist, 100);
     index=count;
     
-    
     while(1) {
         menu = selectMenu();
         if((menu==2)||(menu==3)||(menu==4) || (menu==4) || (menu==6) || (menu==7) || (menu==8) || (menu==9) || (menu==10)){
