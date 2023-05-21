@@ -82,10 +82,14 @@ int main() {
         else if(menu == 4) {
             printf("\n");
             int num=searchID(plist, index); 
-            if(num == 0) {
+            if(num == -2) {
                 printf("=> 취소됨!\n");
                 continue;
             }
+	    else if(num == -1) {
+		printf("찾으시는 학번이 없습니다.\n");
+		continue;
+	    }
             updateStudent(&plist[num]);
             printf("\n");
         }
