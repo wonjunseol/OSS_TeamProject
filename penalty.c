@@ -169,14 +169,8 @@ void goCouncel(student *plist, int count) {
                     break;
                 }
             }
-            //else {
                 
-            //}
         }
-        //else if(plist[i].totalNum == 0) {
-        //    printf("입력하신 학번은 없는 학번입니다.\n");
-         //   break;
-        //}
     }
     if(checkNum == 0) {
         printf("입력한 학번은 없는 학번입니다.\n");
